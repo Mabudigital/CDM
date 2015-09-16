@@ -28,7 +28,6 @@
     <preference name="SplashScreen"               value="screen"/>
     <preference name="SplashScreenDelay"          value="5000" />
 	<preference name="autoLink"                  value="email|phone" />
-	<!--<preference name="AndroidLaunchMode" value="singleinstance" />-->
 	<icon src="icon.png" />
     <icon gap:qualifier="ldpi" gap:platform="android" src="res/icon/android/icon-36-ldpi.png" />
     <icon gap:qualifier="mdpi" gap:platform="android" src="res/icon/android/icon-48-mdpi.png" />

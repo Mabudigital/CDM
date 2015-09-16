@@ -80,7 +80,7 @@ var streamingUrl="http://unoredcdn.net/radiocdm/myStream.sdp/playlist.m3u8";
 		<img  src="images/logo_radio.jpg"/>
 		<div data-role="navbar">
 			<ul>
-				<li><a href="#"><img onClick="play();" class="play-btn" src="images/play.png"/></a></li>
+				<li><a href="#"><img onclick="playAudio()" class="play-btn" src="images/play.png"/></a></li>
 				<li><a href="#"><img class="call-btn call" src="images/call.png"/></a></li>
 			</ul>
 		</div>
@@ -109,7 +109,7 @@ document.addEventListener('deviceready', function () {
 			  }
 		navigator.notification.alert(jsonData.message, alertDismissed,'CDM Internacional', 'Ok')
 	};
-	window.plugins.OneSignal.init("000bb786-3469-11e5-b564-f3a7b95de935",
+	window.plugins.OneSignal.init("11c9d7f8-5c2f-11e5-b9c6-af0691857d6f",
 					   {googleProjectNumber: "534619972153"},
 					   notificationOpenedCallback);
 	window.plugins.OneSignal.enableNotificationsWhenActive(false);

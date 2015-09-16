@@ -26,8 +26,8 @@
     <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
     <!--<preference name="fullscreen"                 value="true" />            all: hides the status bar at the top of the screen -->
-    <preference name="android-minSdkVersion"      value="7" />             <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
-    <preference name="android-targetSdkVersion"   value="19" />
+    <preference name="android-minSdkVersion"      value="9" />             <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
+    <preference name="android-targetSdkVersion"   value="21" />
 	<preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
     <preference name="SplashScreen"               value="screen"/>
     <preference name="SplashScreenDelay"          value="5000" />
@@ -62,6 +62,7 @@
 	<gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2"/>
 	<gap:plugin name="com.onesignal.plugins.onesignal" />
 	<gap:plugin name="com.teamnemitoff.phonedialer" version="0.3.0" />
+	<gap:plugin name="com.mcsqd.cordova.plugins.streamingmedia" version="0.1.4" />
 
 	<access orgin="*"/>
 	<access origin="tel:*" launch-external="yes"/>
@@ -71,4 +72,6 @@
 	<access origin="http://www.wibxi.com/apps/cdm/*"/>
 	<access origin="http://unoredcdn.net/radiocdm/myStream.sdp/playlist.m3u8"/>
 	<access origin="rtmp://unoredcdn.net:1935/cadenadelmilagro"/>
+	<access origin="http://unoredcdn.net/*"/>
+	<access origin="http://www.youtube.com/user/cdminternacional"/>
 </widget>

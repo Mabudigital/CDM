@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "com.cdminternacional.app"
+		xmlns:android   = "http://schemas.android.com/apk/res/android"
+        id          = "com.cdminternal.app"
 		VersionCode = "10"
         version     = "1.0.0" >
     <!-- versionCode is optional and Android only -->
+
     <name>CDM Internacional</name>
+
     <description>
-        Alcanzando al mundo
+       CDM Internacional. Alcanzando al mundo.
     </description>
-    <author href="https://wibxi.com" email="info@wibxi.com">
-       Manuel Echevarría - Wibxi Team
+
+    <author href="http://wibxi.com" email="info@wibxi.com">
+        Wibxi Team
     </author>
 	<gap:platform name="android" />
 	 <gap:config-file platform="android" parent="/manifest">
@@ -28,6 +32,7 @@
     <preference name="SplashScreen"               value="screen"/>
     <preference name="SplashScreenDelay"          value="5000" />
 	<preference name="autoLink"                  value="email|phone" />
+	<!--<preference name="AndroidLaunchMode" value="singleinstance" />-->
 	<icon src="icon.png" />
     <icon gap:qualifier="ldpi" gap:platform="android" src="res/icon/android/icon-36-ldpi.png" />
     <icon gap:qualifier="mdpi" gap:platform="android" src="res/icon/android/icon-48-mdpi.png" />
@@ -39,6 +44,7 @@
     <gap:splash gap:qualifier="hdpi" gap:platform="android" src="res/screen/android/screen-hdpi-portrait.png" />
     <gap:splash gap:qualifier="xhdpi" gap:platform="android" src="res/screen/android/screen-xhdpi-portrait.png" />
 	<!-- Plugins -->
+
     <!-- Core plugins -->
 	<gap:plugin name="org.apache.cordova.device" version="0.2.12" />
 	<gap:plugin name="org.apache.cordova.core.Device" />
@@ -56,17 +62,13 @@
 	<gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2"/>
 	<gap:plugin name="com.onesignal.plugins.onesignal" />
 	<gap:plugin name="com.teamnemitoff.phonedialer" version="0.3.0" />
-	
+
 	<access orgin="*"/>
 	<access origin="tel:*" launch-external="yes"/>
 	<access origin="mailto:*" launch-external="yes"/>
 	<access origin="https://www.facebook.com/cdminternacionaltv/*"/>
 	<access origin="http://www.youtube.com/embed/*"/>
 	<access origin="http://www.wibxi.com/apps/cdm/*"/>
-	<access origin="*.fbcdn.net"/>
-	<access origin="*.akamaihd.net"/>
-	<access origin="m.facebook.com"/>
-	<access origin="graph.facebook.com"/>
 	<access origin="http://unoredcdn.net/radiocdm/myStream.sdp/playlist.m3u8"/>
 	<access origin="rtmp://unoredcdn.net:1935/cadenadelmilagro"/>
 </widget>

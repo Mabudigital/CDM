@@ -74,4 +74,6 @@
 	<access origin="rtmp://unoredcdn.net:1935/cadenadelmilagro"/>
 	<access origin="http://unoredcdn.net/*"/>
 	<access origin="http://www.youtube.com/user/cdminternacional"/>
+	<access origin="rtmp://*/*" />
+	<access origin="m3u8://*/*" />
 </widget>

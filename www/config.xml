@@ -63,6 +63,8 @@
 	<gap:plugin name="com.onesignal.plugins.onesignal" />
 	<gap:plugin name="com.teamnemitoff.phonedialer" version="0.3.0" />
 	<gap:plugin name="com.mcsqd.cordova.plugins.streamingmedia" version="0.1.4" />
+	<gap:plugin name="com.adobe.plugins.gaplugin" version="2.4.0" />
+	
 
 	<access orgin="*"/>
 	<access origin="tel:*" launch-external="yes"/>

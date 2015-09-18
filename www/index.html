@@ -30,16 +30,16 @@ var streamingUrl="http://unoredcdn.net/radiocdm/myStream.sdp/playlist.m3u8";
 	</div>
 	<div id="content" class="content" >
 		 <ul id="menu-list">
-			<li><a href="#tv"><img src="images/video.png"/>Televisión</a></li>
-			<li><a href="#radio"><img src="images/audio.png"/>Radio</a></li>
-			<li><a href="#" class="call"><img src="images/call_2.png"/>Llamar</a></li>
-			<li><a href="#" class="contact"><img src="images/email.png"/>Email</a></li>
-			<li><a href="#schedule"><img src="images/schedule.png"/>Programación</a></li>
-			<li><a href="#" onclick="window.open('http://www.cdminternacional.com','_blank','location=no,closebuttoncaption=Atrás');"><img src="images/web.png"/>Sitio Web</a></li>
-			<li><a href="#donation"><img src="images/donation.png"/>Donar</a></li>
-			<li><a href="#notification"><img src="images/notification.png"/>Notificaciones</a></li>
-			<li><a href="#" onclick="window.open('https://m.facebook.com/cdminternacionaltv','_blank','location=no,closebuttoncaption=Atrás');"><img src="images/facebook.png"/>Facebook</a></li>
-			<li><a href="#" onclick= "window.open('https://www.youtube.com/user/cdminternacional','_blank','location=no,closebuttoncaption=Atrás');"><img src="images/youtube.png"/>YouTube</a></li>
+			<li><a href="#tv" onclick="tvOn()"><img src="images/icon_tv.png"/></a></li>
+			<li><a href="#radio" onclick="tvOff()"><img src="images/icon_radio.png"/></a></li>
+			<li><a href="#" class="call"><img src="images/icon_call.png"/></a></li>
+			<li><a href="#donation"><img src="images/icon_donation.png"/></a></li>
+			<li><a href="#" class="contact"><img src="images/icon_email.png"/></a></li>
+			<li><a href="#schedule"><img src="images/icon_schedule.png"/></a></li>
+			<li><a href="#notification"><img src="images/icon_notification.png"/></a></li>
+			<li><a href="#" onclick="window.open('http://www.cdminternacional.com','_blank','location=no,closebuttoncaption=Atrás');"><img src="images/icon_web.png"/></a></li>			
+			<li><a href="#" onclick="window.open('https://m.facebook.com/cdminternacionaltv','_blank','location=no,closebuttoncaption=Atrás');"><img src="images/icon_facebook.png"/></a></li>
+			<li><a href="#" onclick= "window.open('https://www.youtube.com/user/cdminternacional','_blank','location=no,closebuttoncaption=Atrás');"><img src="images/icon_youtube.png"/></a></li>
 		</ul>
 	</div>
 	<div id="ads">
@@ -55,38 +55,38 @@ var streamingUrl="http://unoredcdn.net/radiocdm/myStream.sdp/playlist.m3u8";
 				</script>
 				<div id="rotating-item-wrapper"></div>
 			</div>
-		</div>
+	</div>
 </div>
 <div data-role="page" id="tv">
 	<div data-role="header" data-position="fixed" data-tap-toggle="false" id="myheader" align="center">
-		<a class="back-btn" href="#home" onClick="tvOff()" data-direction="reverse" data-role="none"><img src="images/back-btn.png"/></a>
-		<h3>CDM TV</h3>
+		<a class="back-btn"  href="#home" data-direction="reverse" data-role="none"><img src="images/back-btn.png"/></a>
+		<img style="height:60px;margin-top:-8px" src="images/cdmtv.png"/>
 	</div>	
 	<div data-role="content" >
-		<iframe id="cdmvideo" src="http://unoredcdn.com/iframe/plans-noauto.php?s=myStream.sdp&=cadenadelmilagro" width="100%" height="250" frameborder="0" scrolling="no" align="center" allowtransparency="true"></iframe>
+		<div id="videoplayer"></div>
 	</div>
 	<div id="ads">
-			<div id="imgslide">
-				<script type="text/javascript"> 
-					var output="";
-					$.getJSON("http://www.rockapr.com/site/slideshowjson.php",function(adsdata){ 
-						for(adsi in adsdata){
-						output+='<a href="#" class="rotating-item" onclick="window.open(\''+adsdata[adsi].banner_link+'\');"><img src="'+adsdata[adsi].banner_img+'" alt="'+adsdata[adsi].banner_title+'"  title="'+adsdata[adsi].banner_title+'"></a>';	
-						}			
-						$('#rotating-item-wrapper').append(output);	
-					});
-				</script>
-				<div id="rotating-item-wrapper"></div>
-			</div>
+		<div id="imgslide">
+			<script type="text/javascript"> 
+				var output="";
+				$.getJSON("http://www.rockapr.com/site/slideshowjson.php",function(adsdata){ 
+					for(adsi in adsdata){
+					output+='<a href="#" class="rotating-item" onclick="window.open(\''+adsdata[adsi].banner_link+'\');"><img src="'+adsdata[adsi].banner_img+'" alt="'+adsdata[adsi].banner_title+'"  title="'+adsdata[adsi].banner_title+'"></a>';	
+					}			
+					$('#rotating-item-wrapper').append(output);	
+				});
+			</script>
+			<div id="rotating-item-wrapper"></div>
 		</div>
+	</div>
 </div>
 <div data-role="page" id="radio">
 	<div data-role="header" data-position="fixed" data-tap-toggle="false" id="myheader" align="center">
-		<a class="back-btn" href="#home" data-direction="reverse" data-role="none"><img src="images/back-btn.png"/></a>
-		<h3>CDM Radio</h3>
+		<a class="back-btn"  href="#home" data-direction="reverse" data-role="none"><img src="images/back-btn.png"/></a>
+		<img style="height:60px;margin-top:-8px" src="images/cdmradio.png"/>
 	</div>	
-	<div data-role="content" >
-		<img  src="images/logo_radio.jpg"/>
+	<div data-role="content" class="content">
+		<img id="radio-logo" src="images/cdm_radio.png"/>
 		<div data-role="navbar">
 			<ul>
 				<li><a id="playbutton" href="#" onclick="playAudio()"><img id="play" class = "play-btn" src="images/play.png"/></a></li>
@@ -188,7 +188,7 @@ $('.call').on("click",function(){
 		window.location.href = "tel:7872625400";
 	});
 $('.contact').on("click",function(){
-	window.location.href = "mailto:";
+	window.location.href = "mailto:cartas@cdminternacional.com";
 });
 document.addEventListener("deviceready", onDeviceReady, false);
 var myMedia = null;
@@ -251,26 +251,12 @@ function stopAudio() {
 }
 var video;
 function tvOn(){
-	stopAudio();
-	 var videoUrl = "rtmp://unoredcdn.net:1935/cadenadelmilagro";
-
-	  // Just play a video
-	  window.plugins.streamingMedia.playVideo(videoUrl);
-
-	  // Play a video with callbacks
-	  var options = {
-		successCallback: function() {
-		  console.log("Video was closed without error.");
-		},
-		errorCallback: function(errMsg) {
-		  console.log("Error! " + errMsg);
-		}
-	  };
-	  window.plugins.streamingMedia.playVideo(videoUrl, options);
+	$("#tv #videoplayer").load("http://wibxi.com/apps/cdm_ios/videoplayer.html");
+	$('#cdmvideo').get(0).play();
 }
 function tvOff(){
-	//$('#rockahdvideo').get(0).pause();
-	playAudio();
+	$('#cdmvideo').get(0).pause();
+	//playAudio();
 }
 document.addEventListener("backbutton", function(e){
 	if($.mobile.activePage.is('#home')){

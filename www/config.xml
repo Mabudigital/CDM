@@ -79,7 +79,7 @@
 	<access origin="mailto:*" launch-external="yes"/>
 	<access origin="https://www.facebook.com/cdminternacionaltv/*"/>
 	<access origin="http://www.youtube.com/embed/*"/>
-	<access origin="http://www.wibxi.com/apps/cdm_ios/*"/>
+	<access origin="http://wibxi.com/apps/*"/>
 	<access origin="http://unoredcdn.net/radiocdm/myStream.sdp/playlist.m3u8"/>
 	<access origin="rtmp://unoredcdn.net:1935/cadenadelmilagro"/>
 	<access origin="http://unoredcdn.net/*"/>

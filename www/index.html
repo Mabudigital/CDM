@@ -193,12 +193,7 @@ $('.contact').on("click",function(){
 document.addEventListener("deviceready", onDeviceReady, false);
 var myMedia = null;
 var playing = false;
-function onDeviceReady(){
-	updateMedia();
-	playAudio();
-	gaPlugin = window.plugins.gaPlugin;
-	gaPlugin.init(successHandler, errorHandler, "UA-38947668-5", 10);
-}
+
 //notifications
 document.addEventListener('deviceready', function () {
 	var notificationOpenedCallback = function(jsonData) {
@@ -253,6 +248,7 @@ var video;
 function tvOn(){
 	$("#tv #videoplayer").load("http://wibxi.com/apps/cdm_ios/videoplayer.html");
 	$('#cdmvideo').get(0).play();
+	stopAudio();
 }
 function tvOff(){
 	$('#cdmvideo').get(0).pause();

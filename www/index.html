@@ -37,9 +37,9 @@ var streamingUrl="http://unoredcdn.net/radiocdm/myStream.sdp/playlist.m3u8";
 			<li><a href="#" class="contact"><img src="images/icon_email.png"/></a></li>
 			<li><a href="#schedule"><img src="images/icon_schedule.png"/></a></li>
 			<li><a href="#notification"><img src="images/icon_notification.png"/></a></li>
-			<li><a href="#" onclick="window.open('http://www.cdminternacional.com','_blank','location=no,closebuttoncaption=Atrás');"><img src="images/icon_web.png"/></a></li>			
-			<li><a href="#" onclick="window.open('https://m.facebook.com/cdminternacionaltv','_blank','location=no,closebuttoncaption=Atrás');"><img src="images/icon_facebook.png"/></a></li>
-			<li><a href="#" onclick= "window.open('https://www.youtube.com/user/cdminternacional','_blank','location=no,closebuttoncaption=Atrás');"><img src="images/icon_youtube.png"/></a></li>
+			<li><a href="#" onclick="window.open('http://www.cdminternacional.com');"><img src="images/icon_web.png"/></a></li>			
+			<li><a href="#" onclick="window.open('https://m.facebook.com/cdminternacionaltv');"><img src="images/icon_facebook.png"/></a></li>
+			<li><a href="#" onclick= "window.open('https://www.youtube.com/user/cdminternacional');"><img src="images/icon_youtube.png"/></a></li>
 		</ul>
 	</div>
 	<div id="ads">
@@ -117,7 +117,7 @@ var streamingUrl="http://unoredcdn.net/radiocdm/myStream.sdp/playlist.m3u8";
 	<div data-role="content" >
 		<img  src="images/logo_radio.jpg"/>
 		<h3>Ofrendas</h3>
-		<a href="#" onclick="window.open('https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VBAZT7HXWX3NJ','_blank','location=no,closebuttoncaption=Atrás');"><img style="width:100%" src="http://cdminternacional.com/ofrendas/ofrenda.jpg" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"/></a>
+		<a href="#" onclick="window.open('https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VBAZT7HXWX3NJ');"><img style="width:100%" src="http://cdminternacional.com/ofrendas/ofrenda.jpg" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"/></a>
 		
 		<h3>Ofrenda mensual($10-$100)</h3>
 		<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_system">
@@ -216,7 +216,7 @@ document.addEventListener('deviceready', function () {
 	window.plugins.OneSignal.enableVibrate(false);
 },false); 
 function updateMedia() {
-	myMedia = new Media('http://unoredcdn.net/radiocdm/myStream.sdp/playlist.m3u8', stopAudio, null);
+	myMedia = new Media('http://livestreamcdn.net/radiocdm/myStream.sdp', stopAudio, null);
 }
 function playAudio() {
 	if (!playing) {

@@ -63,8 +63,8 @@ var streamingUrl="http://unoredcdn.net/radiocdm/myStream.sdp/playlist.m3u8";
 		<img style="height:60px;margin-top:-8px" src="images/cdmtv.png"/>
 	</div>	
 	<div data-role="content" >
-		<!--<img  id="tv-logo" onClick="tvOn()" src="images/cdm_tv.png"/>-->
-		<div id="videoplayer"></div>
+		<img  id="tv-logo" onClick="tvOn();" src="images/cdm_tv.png"/>
+		
 	</div>
 	<div id="ads">
 		<div id="imgslide">
@@ -247,8 +247,8 @@ function stopAudio() {
 }
 function tvOn(){
 	//stopAudio();
-	$("#tv #videoplayer").load("http://www.wibxi.com/apps/cdm/videoplayer.html");
-	/* var videoUrl = "http://unoredcdn.com/iframe/plans-noauto.php?s=myStream.sdp&c=cadenadelmilagro";
+	//$("#tv #videoplayer").load("http://www.wibxi.com/apps/cdm/videoplayer.html");
+	var videoUrl = "http://unoredcdn.net/cadenadelmilagro/myStream.sdp/playlist.m3u8";
 	  // Just play a video
 	  window.plugins.streamingMedia.playVideo(videoUrl);
 	  // Play a video with callbacks
@@ -260,7 +260,7 @@ function tvOn(){
 		  console.log("Error! " + errMsg);
 		}
 	  };
-	  window.plugins.streamingMedia.playVideo(videoUrl, options);*/
+	  window.plugins.streamingMedia.playVideo(videoUrl, options);
 }
 function tvOff(){
 	$('#cdmvideo').get(0).pause();

@@ -212,7 +212,7 @@ document.addEventListener('deviceready', function () {
 	window.plugins.OneSignal.enableVibrate(false);
 },false); 
 function updateMedia() {
-	myMedia = new Media('', stopAudio, null);
+	myMedia = new Media('http://unoredcdn.net/radiocdm/myStream.sdp/playlist.m3u8', stopAudio, null);
 }
 function playAudio() {
 	if (!playing) {

@@ -212,7 +212,7 @@ document.addEventListener('deviceready', function () {
 	window.plugins.OneSignal.enableVibrate(false);
 },false); 
 function updateMedia() {
-	myMedia = new Media('rtmp://unoredrtmp.tulix.tv:1935/radiocdm', stopAudio, null);
+	myMedia = new Media('http://unoredcdn.net/radiocdm/myStream.sdp/playlist.m3u8', stopAudio, null);
 }
 function playAudio() {
 	if (!playing) {
@@ -246,7 +246,7 @@ function stopAudio() {
 	document.getElementById('play').src = "images/play.png";     
 }
 function tvOn(){
-	//stopAudio();
+	stopAudio();
 	//$("#tv #videoplayer").load("http://www.wibxi.com/apps/cdm/videoplayer.html");
 	var videoUrl = "http://unoredcdn.net/cadenadelmilagro/myStream.sdp/playlist.m3u8";
 	  // Just play a video

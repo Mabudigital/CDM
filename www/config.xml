@@ -79,11 +79,12 @@
 	<access origin="mailto:*" launch-external="yes"/>
 	<access origin="https://www.facebook.com/cdminternacionaltv/*"/>
 	<access origin="http://www.youtube.com/embed/*"/>
+	<access origin="http://www.youtube.com/user/cdminternacional"/>
 	<access origin="http://wibxi.com/apps/*"/>
 	<access origin="http://unoredcdn.net/radiocdm/myStream.sdp/playlist.m3u8"/>
 	<access origin="rtmp://unoredcdn.net:1935/cadenadelmilagro"/>
 	<access origin="http://unoredcdn.net/*"/>
-	<access origin="http://www.youtube.com/user/cdminternacional"/>
+	<access origin="http://unoredcdn.com/*"/>
 	<access origin="rtmp://*/*" />
 	<access origin="m3u8://*/*" />
 </widget>

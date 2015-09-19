@@ -212,7 +212,7 @@ document.addEventListener('deviceready', function () {
 	window.plugins.OneSignal.enableVibrate(false);
 },false); 
 function updateMedia() {
-	myMedia = new Media('http://unoredcdn.net/radiocdm/myStream.sdp/playlist.m3u8', stopAudio, null);
+	myMedia = new Media('', stopAudio, null);
 }
 function playAudio() {
 	if (!playing) {
@@ -263,7 +263,7 @@ function tvOn(){
 	  window.plugins.streamingMedia.playVideo(videoUrl, options);
 }
 function tvOff(){
-	$('#cdmvideo').get(0).pause();
+	//$('#cdmvideo').get(0).pause();
 	//playAudio();
 }
 document.addEventListener("backbutton", function(e){

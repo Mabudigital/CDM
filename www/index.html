@@ -188,6 +188,26 @@ $('.call').on("click",function(){
 $('.contact').on("click",function(){
 	window.location.href = "mailto:cartas@cdminternacional.com";
 });
+function tvOn(){
+	//stopAudio();
+	var videoUrl = "http://unoredcdn.net/cadenadelmilagro/myStream.sdp/playlist.m3u8";
+	  // Just play a video
+	  window.plugins.streamingMedia.playVideo(videoUrl);
+	  // Play a video with callbacks
+	  var options = {
+		successCallback: function() {
+		 //console.log("Video was closed without error.");
+		},
+		errorCallback: function(errMsg) {
+		  //console.log("Error! " + errMsg);
+		}
+	  };
+	  window.plugins.streamingMedia.playVideo(videoUrl, options);
+}
+function tvOff(){
+	//$('#cdmvideo').get(0).pause();
+	//playAudio();
+}
 document.addEventListener("deviceready", onDeviceReady, false);
 var myMedia = null;
 var playing = false;
@@ -229,26 +249,7 @@ function stopAudio() {
 	document.getElementById('play').src = "images/play.png";     
 }
 var video;
-function tvOn(){
-	stopAudio();
-	var videoUrl = "http://unoredcdn.net/cadenadelmilagro/myStream.sdp/playlist.m3u8";
-	  // Just play a video
-	  window.plugins.streamingMedia.playVideo(videoUrl);
-	  // Play a video with callbacks
-	  var options = {
-		successCallback: function() {
-		 //console.log("Video was closed without error.");
-		},
-		errorCallback: function(errMsg) {
-		  //console.log("Error! " + errMsg);
-		}
-	  };
-	  window.plugins.streamingMedia.playVideo(videoUrl, options);
-}
-function tvOff(){
-	//$('#cdmvideo').get(0).pause();
-	//playAudio();
-}
+
 //notifications
 document.addEventListener('deviceready', function () {
 	var notificationOpenedCallback = function(jsonData) {

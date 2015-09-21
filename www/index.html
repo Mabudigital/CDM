@@ -29,7 +29,7 @@ var radioStreamingUrl="http://unoredcdn.net/radiocdm/myStream.sdp/playlist.m3u8"
 	<div id="content" class="content" >
 		 <ul id="menu-list">
 			<li><a href="#tv" onclick="tvOn();"><img src="images/icon_tv.png"/></a></li>
-			<li><a href="#radio" onclick="radioOn();><img src="images/icon_radio.png"/></a></li>
+			<li><a href="#radio" onclick="radioOn();"><img src="images/icon_radio.png"/></a></li>
 			<li><a href="#" class="call"><img src="images/icon_call.png"/></a></li>
 			<li><a href="#donation"><img src="images/icon_donation.png"/></a></li>
 			<li><a href="#" class="contact"><img src="images/icon_email.png"/></a></li>
@@ -84,7 +84,7 @@ var radioStreamingUrl="http://unoredcdn.net/radiocdm/myStream.sdp/playlist.m3u8"
 		<img style="height:60px;margin-top:-8px" src="images/cdmradio.png"/>
 	</div>	
 	<div data-role="content" class="content">
-		<!--<img id="radio-logo" src="images/cdm_radio.png"/>
+		<img id="radio-logo" onclick="radioOn();" src="images/cdm_radio.png"/>
 		<div data-role="navbar">
 			<ul>
 				<li><a id="playbutton" href="#" onclick="playAudio()"><img id="play" class = "play-btn" src="images/play.png"/></a></li>
@@ -107,7 +107,7 @@ var radioStreamingUrl="http://unoredcdn.net/radiocdm/myStream.sdp/playlist.m3u8"
 			</div>
 		</div>
 </div>
-<div data-role="page" id="donation">
+<!--<div data-role="page" id="donation">
 	<div data-role="header" data-position="fixed" data-tap-toggle="false" id="myheader" align="center">
 		<a class="back-btn" href="#home" data-direction="reverse" data-role="none"><img src="images/back-btn.png"/></a>
 		<h3>Donaciones</h3>
@@ -250,7 +250,7 @@ function stopAudio() {
 }
 */
 function radioOn(){
-	var audioUrl = http://unoredcdn.net/radiocdm/myStream.sdp/playlist.m3u8;
+	var audioUrl = "http://unoredcdn.net/radiocdm/myStream.sdp/playlist.m3u8";
 
 	  // Play an audio file (not recommended, since the screen will be plain black)
 	  window.plugins.streamingMedia.playAudio(audioUrl);

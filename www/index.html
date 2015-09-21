@@ -36,7 +36,7 @@ var streamingUrl="http://unoredcdn.net/radiocdm/myStream.sdp/playlist.m3u8";
 			<li><a href="#donation"><img src="images/icon_donation.png"/></a></li>
 			<li><a href="#" class="contact"><img src="images/icon_email.png"/></a></li>
 			<li><a href="#schedule"><img src="images/icon_schedule.png"/></a></li>
-			<li><a href="#notification"><img src="images/icon_notification.png"/></a></li>
+			<li><a href="#notification"><img src="images/icon_notifications.png"/></a></li>
 			<li><a href="#" onclick="window.open('http://www.cdminternacional.com');"><img src="images/icon_web.png"/></a></li>			
 			<li><a href="#" onclick="window.open('https://m.facebook.com/cdminternacionaltv');"><img src="images/icon_facebook.png"/></a></li>
 			<li><a href="#" onclick= "window.open('https://www.youtube.com/user/cdminternacional');"><img src="images/icon_youtube.png"/></a></li>
@@ -64,7 +64,6 @@ var streamingUrl="http://unoredcdn.net/radiocdm/myStream.sdp/playlist.m3u8";
 	</div>	
 	<div data-role="content" >
 		<img  id="tv-logo" onClick="tvOn();" src="images/cdm_tv.png"/>
-		<div id="videoplayer"></div>
 	</div>
 	<div id="ads">
 		<div id="imgslide">
@@ -228,21 +227,21 @@ function stopAudio() {
 	document.getElementById('play').src = "images/play.png";     
 }
 function tvOn(){
-	//stopAudio();
-	$("#tv #videoplayer").load("videoplayer.html");
-	//var videoUrl = "http://unoredcdn.net/cadenadelmilagro/myStream.sdp/playlist.m3u8";
+	stopAudio();
+	//$("#videoplayer").load("videoplayer.html");
+	var videoUrl = "http://unoredcdn.net/cadenadelmilagro/myStream.sdp/playlist.m3u8";
 	  // Just play a video
-	 // window.plugins.streamingMedia.playVideo(videoUrl);
+	  window.plugins.streamingMedia.playVideo(videoUrl);
 	  // Play a video with callbacks
-	//  var options = {
-	//	successCallback: function() {
-	//	  console.log("Video was closed without error.");
-	//	},
-	//	errorCallback: function(errMsg) {
+	  var options = {
+		successCallback: function() {
+		  console.log("Video was closed without error.");
+		},
+		errorCallback: function(errMsg) {
 	//	  console.log("Error! " + errMsg);
-	//	}
-	//  };
-	//  window.plugins.streamingMedia.playVideo(videoUrl, options);
+		}
+	  };
+	  window.plugins.streamingMedia.playVideo(videoUrl, options);
 }
 function tvOff(){
 	//$('#cdmvideo').get(0).pause();

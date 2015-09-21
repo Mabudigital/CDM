@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, usr-scalable=no, minimal-ui">
+
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" charset="utf-8" src="js/html5audio.js"></script>
+</head>
+<body>
+<div data-role="content" >
+		<div id="logo"><img style="width:100%;height:auto;"src="images/cdm_radio.png"/></div>
+		<div id="playBtn" style="text-align:center;"><a id="playbutton" href="#" class="blue" onClick="html5audio.play();return false;"><img src="images/play.png"/></a><a href="#" class="blue" id="activityindicator" onClick="html5audio.stop();return false;"><img src="images/activityindicator.gif"/></a><a id="stopbutton" href="#" class="stopaudio blue" onClick="html5audio.stop();return false;"><img  src="images/stop.png"/></a></div>
+</div>
+<script type="text/javascript" charset="utf-8">
+	document.addEventListener("deviceready", onDeviceReady, false);
+	function onDeviceReady() {
+		html5audio.play();
+	}
+	//html 5 audio
+	playButton = document.getElementById('playbutton');
+	stopButton = document.getElementById('stopbutton');
+	activityIndicator = document.getElementById('activityindicator');
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+#video-player{width:100%;height:50%;max-height:50%;}
+#fullscreentoggle{
+  position: relative; 
+  bottom: 0; 
+  left:0;
+  color: #FFF; 
+  text-align: center;
+  font-size: 20px;
+  background-color: rgba(0, 0,0, 1);
+  width: 100%;
+  /*padding: 10px 0;*/
+ /* z-index: 2147483647;*/
+  border:0;
+}
+#rockahdvideo{z-index:-1000;}
+</style>
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+var elem = document.getElementById("rockahdvideo");
+if (elem.requestFullscreen) {
+  elem.requestFullscreen();
+} else if (elem.mozRequestFullScreen) {
+  elem.mozRequestFullScreen();
+} else if (elem.webkitRequestFullscreen) {
+  elem.webkitRequestFullScreen();
+}
+});
+function goFullscreen(id) {
+ var element = document.getElementById(id);
+if (element.requestFullscreen) {
+  element.requestFullscreen();
+	} else if (element.mozRequestFullScreen) {
+    element.mozRequestFullScreen();
+  } else if (element.webkitRequestFullscreen) {
+    element.webkitRequestFullscreen();
+  }  
+}
+</script>
+</head>
+<body>
+<div id="video-player" >
+	<iframe id ="rockahdvideo" height="250" width="100%" src="http://admin.unoredcdn.com/iframe/plans.php?s=myStream.sdp&c=cadenadelmilagro" frameborder="0" allowfullscreen></iframe>
+	<!--<div id="switch-mode" class="audio"><img src="../images/audio-icon.svg"/></div>
+	<video id="rockahdvideo" width="100%" height="100%" controls autoplay poster="http://rockapr.com/site/images/Rockahd.jpg" src="http://unoredcdn.net/rockaradio/myStream.sdp/playlist.m3u8">
+        <source src="http://unoredcdn.net/rockaradio/myStream.sdp/playlist.m3u8"/>
+    </video>
+	<button id="fullscreentoggle" onclick="goFullscreen('rockahdvideo'); return false">
+		Ver en Fullscreen
+	</button> -->
+</div>
+</body>
+</html>
